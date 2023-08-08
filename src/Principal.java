@@ -9,7 +9,7 @@ public class Principal  {
         CartaoDeCredito cartao = new CartaoDeCredito(limite);
 
         int sair = 1;
-        Compras compra = null;
+        //Compras compra = null;
         while (sair != 0) {
             System.out.println("Digite a descrição da compra:");
             String descricao = leitura.next();
@@ -17,7 +17,7 @@ public class Principal  {
             System.out.println("Digite o valor da compra:");
             double valor = leitura.nextDouble();
 
-            compra = new Compras(descricao, valor);
+            Compras compra = new Compras(descricao, valor);
             boolean compraRealizada = cartao.lancaCompra(compra);
 
             if (compraRealizada) {
